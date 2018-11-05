@@ -1,0 +1,36 @@
+def main():
+    infile=open("new.txt","w")
+    infile.write("hi there, How are you!\n OK now I am typing \n just to fill the maximum lines\n atleast four line\n and i think i got it.")
+    infile.close()
+
+    infile=open("new.txt","r")
+    print("(1) Using Read(): ")
+    print(infile.read())
+    infile.close()
+
+    infile=open("new.txt","r")
+    print("\n(2) using read(number): ")
+    s1=infile.read(4)
+    print(s1)
+    s2=infile.read(10)
+    print(repr(s2))
+    infile.close()
+
+    infile=open("new.txt","r")
+    print("(3) Using readline(): ")
+    lin1=infile.readline()
+    lin2=infile.readline()
+    lin3=infile.readline()
+    lin4=infile.readline()
+    print(repr(lin1))
+    print(repr(lin2))
+    print(repr(lin3))
+    print(repr(lin4))
+    infile.close()
+
+    infile=open("new.txt","r")
+    print("(4) Using readlines: ")
+    print(infile.readlines())
+    infile.close()
+
+main()
